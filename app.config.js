@@ -50,6 +50,7 @@ export default {
     extra: {
       infuraProjectId: process.env.INFURA_PROJECT_ID,
       contractAddress: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS,
+      geminiApiKey: process.env.EXPO_PUBLIC_GEMINI_API_KEY,
     },
   },
 };

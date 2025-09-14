@@ -4,8 +4,8 @@ import { StyleSheet, View } from "react-native";
 
 export default function TabsLayout() {
   return (
-    <Tabs 
-      screenOptions={{ 
+    <Tabs
+      screenOptions={{
         headerShown: false,
         tabBarStyle: styles.tabBar,
         tabBarItemStyle: styles.tabBarItem,
@@ -20,10 +20,25 @@ export default function TabsLayout() {
           title: "Home",
           tabBarIcon: ({ focused, color, size }) => (
             <View style={focused ? styles.activeIconContainer : styles.iconContainer}>
-              <Ionicons 
-                name={focused ? "home" : "home-outline"} 
-                size={size} 
-                color={focused ? '#FFF' : color} 
+              <Ionicons
+                name={focused ? "home" : "home-outline"}
+                size={size}
+                color={focused ? '#FFF' : color}
+              />
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="ar"
+        options={{
+          title: "AR",
+          tabBarIcon: ({ focused, color, size }) => (
+            <View style={focused ? styles.activeIconContainer : styles.iconContainer}>
+              <Ionicons
+                name={focused ? "camera" : "camera-outline"}
+                size={size}
+                color={focused ? '#FFF' : color}
               />
             </View>
           ),
@@ -35,10 +50,10 @@ export default function TabsLayout() {
           title: "Transactions",
           tabBarIcon: ({ focused, color, size }) => (
             <View style={focused ? styles.activeIconContainer : styles.iconContainer}>
-              <Ionicons 
-                name={focused ? "briefcase" : "briefcase-outline"} 
-                size={size} 
-                color={focused ? '#FFF' : color} 
+              <Ionicons
+                name={focused ? "briefcase" : "briefcase-outline"}
+                size={size}
+                color={focused ? '#FFF' : color}
               />
             </View>
           ),
